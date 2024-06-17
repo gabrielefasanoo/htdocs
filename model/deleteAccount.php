@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'control/conn.php';
+include_once '../control/conn.php';
 
 if (!isset($_POST['email'])) {
     echo 'Accesso non autorizzato!';

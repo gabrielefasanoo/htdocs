@@ -85,19 +85,28 @@ if ($result->num_rows > 0) {
         </div>
     </nav>
     <!-- Qui mostri i dati dell'utente -->
-    <div class="container">
-        <h1>Profilo di <?php echo htmlspecialchars($user['name']); ?></h1>
-        <p>Nome: <?php echo htmlspecialchars($user['name']); ?></p>
-        <p>Cognome: <?php echo htmlspecialchars($user['surname']); ?></p>
-        <p>Email: <?php echo htmlspecialchars($user['email']); ?></p>
-        <p>Genere: <?php echo htmlspecialchars($user['gender']); ?></p>
-        <p>Ruolo: <?php echo htmlspecialchars($user['role']); ?></p>
-        <form action="../model/deleteAccount.php" method="POST">
-            <input type="hidden" name="email" value="<?php echo htmlspecialchars($user['email']); ?>">
-            <button type="submit" class="btn btn-danger">Elimina account</button>
-        </form>
+    <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+        <div class="card p-4"> <div class=" image d-flex flex-column justify-content-center align-items-center">
+            <button class="btn btn-secondary"> <img src="../img/profile.png" height="100" width="100" /></button>
+            <span class="name mt-3"><strong><?php echo htmlspecialchars($user['name']); ?> <?php echo htmlspecialchars($user['surname']); ?></strong></span>
+            <div class="d-flex flex-row justify-content-center align-items-center mt-3">
+                <span class="idd1">Email: <?php echo htmlspecialchars($user['email']); ?></span> <span><i class="fa fa-copy"></i></span>
+            </div>
+            <div class="d-flex flex-row justify-content-center align-items-center mt-3">
+                <span class="number">Genere: <?php echo htmlspecialchars($user['gender']); ?></span>
+            </div>
+            <div class="d-flex flex-row justify-content-center align-items-center mt-3">
+                <span class="number">Ruolo: <?php echo htmlspecialchars($user['role']); ?></span>
+            </div>
+            <div class="d-flex flex-row justify-content-center align-items-center mt-3">
+                <form action="../model/deleteAccount.php" method="POST">
+                    <input type="hidden" name="email" value="<?php echo htmlspecialchars($user['email']); ?>">
+                    <button type="submit" class="btn btn-danger">Elimina account</button>
+                </form>
+            </div>
+            </div>
+        </div>
     </div>
-
     <!-- Footer-->
     <footer class="py-5 bg-dark">
         <div class="container">

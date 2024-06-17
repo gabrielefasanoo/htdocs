@@ -87,7 +87,7 @@ if ($result->num_rows > 0) {
     <!-- Qui mostri i dati dell'utente -->
     <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
         <div class="card p-4"> <div class=" image d-flex flex-column justify-content-center align-items-center">
-            <button class="btn btn-secondary"> <img src="../img/profile.png" height="100" width="100" /></button>
+            <button class="btn btn-secondary"> <img src="../img/profile.png" alt="" height="100" width="100" /></button>
             <span class="name mt-3"><strong><?php echo htmlspecialchars($user['name']); ?> <?php echo htmlspecialchars($user['surname']); ?></strong></span>
             <div class="d-flex flex-row justify-content-center align-items-center mt-3">
                 <span class="idd1">Email: <?php echo htmlspecialchars($user['email']); ?></span> <span><i class="fa fa-copy"></i></span>
